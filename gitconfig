@@ -1,0 +1,24 @@
+[color]
+	ui = always
+[branch]
+	autosetuprebase = always
+[user]
+	name = Thomas Layh
+	email = develop@layh.com
+[alias]
+	graph = !git log --graph --pretty=oneline --abbrev-commit
+	hist = !git log \\\n --pretty=format:\"%h %ad | %s%d [%an]\" \\\n --graph --date=short
+	diffstaged = diff --cached
+	lastlog = log -1 HEAD
+	amend = commit --amend
+	unstage = reset HEAD
+[core]
+	editor = vim
+	pager = cat
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
