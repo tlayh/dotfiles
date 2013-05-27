@@ -14,7 +14,7 @@ ZSH_THEME="pygmalion"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="ls -la"
-alias CC="cd ~/Projects/work/ConnectedCar"
+alias lt="tree -L 2"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
