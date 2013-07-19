@@ -19,6 +19,7 @@ else
 fi
 
 zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' special-dirs ..
 
 # should this be in keybindings?
 bindkey -M menuselect '^o' accept-and-infer-next-history
