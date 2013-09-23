@@ -51,3 +51,5 @@ setTerminalText () {
     local mode=$1 ; shift
     echo -ne "\033]$mode;$@\007"
 }
+
+zstyle ':completion:*' special-dirs ..
