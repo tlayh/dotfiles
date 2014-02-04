@@ -47,6 +47,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
 setTerminalText () {
     # echo works in bash & zsh
     local mode=$1 ; shift
