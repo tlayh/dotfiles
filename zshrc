@@ -56,3 +56,6 @@ setTerminalText () {
 }
 
 zstyle ':completion:*' special-dirs ..
+
+# change some directory colors:
+export LS_COLORS="${LS_COLORS}tw=30;00:ow=32;32:"
