@@ -9,9 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="afowler"
 ZSH_THEME="pygmalion"
 #ZSH_THEME="steeef"
-#ZSH_THEME="af-magic" // command not found error
-#ZSH_THEME="kphoen"
-
+#ZSH_THEME="af-magic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
