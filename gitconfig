@@ -1,5 +1,10 @@
 [color]
-	ui = always
+	ui = true
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	pager = true
 [branch]
 	autosetuprebase = always
 [user]
@@ -24,3 +29,19 @@
 	trustExitCode = true
 [push]
 	default = matching
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[pager]
+	status = yes
