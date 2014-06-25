@@ -7,9 +7,9 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="maran"
 #ZSH_THEME="afowler"
-#ZSH_THEME="pygmalion"
+ZSH_THEME="pygmalion"
 #ZSH_THEME="steeef"
-ZSH_THEME="af-magic"
+#ZSH_THEME="af-magic"
 #ZSH_THEME="jreese"
 
 # Example aliases
