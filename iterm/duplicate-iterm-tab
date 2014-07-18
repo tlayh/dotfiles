@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# Runs the 'Duplicate iTerm tab' AppleScript, enabling iTerm 2 to run this AppleScript when a
+# given keyboard shortcut is triggered.
+
+osascript << EOF
+-- Duplicate iTerm tab.scpt
+tell application "iTerm"
+    tell the current terminal
+        tell the current session
+            set the_name to get name
+            set tty_name to do shell script "basename " & (get tty)
+            set working_dir to do shell script "pwd-tty " & tty_name
+        end tell
+
+        launch session "Default Session"
+        tell the last session
+            set name to the_name
+            write text "cd '" & working_dir & "'"
+        end tell
+    end tell
+end tell
+EOF

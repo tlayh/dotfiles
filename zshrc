@@ -45,7 +45,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
+export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
 setTerminalText () {
     # echo works in bash & zsh
