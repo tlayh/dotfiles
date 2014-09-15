@@ -11,7 +11,7 @@ ZSH_THEME="steeef"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias l="ls -la"
+alias l="ls -lah"
 alias lt="tree -L 2"
 alias work="cd /Users/tlayh/Projects/work"
 alias down="cd /Users/tlayh/Downloads"
