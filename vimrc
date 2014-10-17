@@ -29,4 +29,5 @@ set list listchars=tab:»·,trail:·
 
 set tabstop=4
 
+" Colorscheme see https://github.com/hukl/Smyck-Color-Scheme
 colorscheme zellner
