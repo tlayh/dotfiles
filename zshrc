@@ -47,6 +47,9 @@ export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
 export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export MULE_HOME="/usr/local/Cellar/maven/3.2.3"
+
 setTerminalText () {
     # echo works in bash & zsh
     local mode=$1 ; shift
