@@ -18,6 +18,7 @@ alias lt="tree -L 2"
 alias work="cd /Users/tlayh/Projects/work"
 alias down="cd /Users/tlayh/Downloads"
 alias doc="cd /Users/tlayh/Documents"
+alias cdp="cd -P"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
