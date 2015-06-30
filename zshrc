@@ -16,6 +16,7 @@ ZSH_THEME="pygmalion"
 alias l="ls -lah"
 alias lt="tree -L 2"
 alias cdp="cd -P"
+alias grep="grep --color"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
