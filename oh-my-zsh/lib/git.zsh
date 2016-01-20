@@ -37,7 +37,9 @@ function git_remote_status() {
         ahead=$(command git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | wc -l)
         behind=$(command git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | wc -l)
 
-        if [[ $ahead -gt 0 ]] && [[ $behind -eq 0 ]]; then
+        if [[ $ahead -eq 0 ]] && [[ $behind -eq 0 ]]; then
+            git_remote_status="$ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE"
+        elif [[ $ahead -gt 0 ]] && [[ $behind -eq 0 ]]; then
             git_remote_status="$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE"
             git_remote_status_detailed="$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE$((ahead))%{$reset_color%}"
         elif [[ $behind -gt 0 ]] && [[ $ahead -eq 0 ]]; then
@@ -75,7 +77,8 @@ function git_current_branch() {
 # Gets the number of commits ahead from remote
 function git_commits_ahead() {
   if $(echo "$(command git log @{upstream}..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
-    local COMMITS=$(command git log @{upstream}..HEAD | grep '^commit' | wc -l | tr -d ' ')
+    local COMMITS
+    COMMITS=$(command git log @{upstream}..HEAD | grep '^commit' | wc -l | tr -d ' ')
     echo "$ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX$COMMITS$ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX"
   fi
 }
@@ -105,12 +108,14 @@ function git_prompt_remote() {
 
 # Formats prompt string for current git commit short SHA
 function git_prompt_short_sha() {
-  local SHA=$(command git rev-parse --short HEAD 2> /dev/null) && echo "$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER"
+  local SHA
+  SHA=$(command git rev-parse --short HEAD 2> /dev/null) && echo "$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER"
 }
 
 # Formats prompt string for current git commit long SHA
 function git_prompt_long_sha() {
-  local SHA=$(command git rev-parse HEAD 2> /dev/null) && echo "$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER"
+  local SHA
+  SHA=$(command git rev-parse HEAD 2> /dev/null) && echo "$ZSH_THEME_GIT_PROMPT_SHA_BEFORE$SHA$ZSH_THEME_GIT_PROMPT_SHA_AFTER"
 }
 
 # Get the status of the working tree
@@ -165,11 +170,10 @@ function git_prompt_status() {
 # Outputs -1, 0, or 1 if the installed version is less than, equal to, or
 # greater than the input version, respectively.
 function git_compare_version() {
-  local INPUT_GIT_VERSION=$1;
-  local INSTALLED_GIT_VERSION
-  INPUT_GIT_VERSION=(${(s/./)INPUT_GIT_VERSION});
-  INSTALLED_GIT_VERSION=($(command git --version 2>/dev/null));
-  INSTALLED_GIT_VERSION=(${(s/./)INSTALLED_GIT_VERSION[3]});
+  local INPUT_GIT_VERSION INSTALLED_GIT_VERSION
+  INPUT_GIT_VERSION=(${(s/./)1})
+  INSTALLED_GIT_VERSION=($(command git --version 2>/dev/null))
+  INSTALLED_GIT_VERSION=(${(s/./)INSTALLED_GIT_VERSION[3]})
 
   for i in {1..3}; do
     if [[ $INSTALLED_GIT_VERSION[$i] -gt $INPUT_GIT_VERSION[$i] ]]; then
@@ -187,4 +191,4 @@ function git_compare_version() {
 # This is unlikely to change so make it all statically assigned
 POST_1_7_2_GIT=$(git_compare_version "1.7.2")
 # Clean up the namespace slightly by removing the checker function
-unset -f git_compare_version
+unfunction git_compare_version
