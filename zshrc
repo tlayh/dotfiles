@@ -57,3 +57,6 @@ zstyle ':completion:*' special-dirs ..
 
 # change some directory colors:
 export LS_COLORS="${LS_COLORS}tw=30;00:ow=32;32:"
+
+# VCODE
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
