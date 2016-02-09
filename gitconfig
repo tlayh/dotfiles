@@ -18,6 +18,7 @@
 	amend = commit --amend
 	unstage = reset HEAD
 	smalllog = log -n 5
+	pullr = pull -r
 [core]
 	editor = vim
 	pager = cat
