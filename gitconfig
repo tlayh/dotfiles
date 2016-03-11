@@ -17,7 +17,7 @@
 	lastlog = log -1 HEAD
 	amend = commit --amend
 	unstage = reset HEAD
-	smalllog = log -n 5
+	smalllog = log -n 5 --pretty --oneline
 	pullr = pull -r
 [core]
 	editor = vim
