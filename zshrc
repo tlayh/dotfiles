@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pygmalion"
+#ZSH_THEME="pygmalion"
+ZSH_THEME="tjkirch"
 #ZSH_THEME="fino"
 
 # Example aliases
@@ -47,6 +48,8 @@ export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+export VAGRANT_HOME=/vm/.vagrant.d
 
 setTerminalText () {
     # echo works in bash & zsh
