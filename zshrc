@@ -10,6 +10,12 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="fino"
 ZSH_THEME="junkfood"
 
+#to try later
+#ZSH_THEME="maran"
+#ZSH_THEME="muse"
+#ZSH_THEME="steeef"
+
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
