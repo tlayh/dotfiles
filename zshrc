@@ -8,12 +8,12 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="pygmalion"
 #ZSH_THEME="tjkirch"
 #ZSH_THEME="fino"
-ZSH_THEME="junkfood"
+#ZSH_THEME="junkfood"
 
 #to try later
 #ZSH_THEME="maran"
 #ZSH_THEME="muse"
-#ZSH_THEME="steeef"
+ZSH_THEME="steeef"
 
 
 # Example aliases
