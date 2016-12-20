@@ -22,6 +22,7 @@ alias l="ls -lah"
 alias lt="tree -L 2"
 alias cdp="cd -P"
 alias grep="grep --color"
+alias svndiff="svn diff | colordiff"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -53,7 +54,7 @@ export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
 export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export VAGRANT_HOME=/vm/.vagrant.d
 
