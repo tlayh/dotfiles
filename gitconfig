@@ -9,7 +9,7 @@
 	autosetuprebase = always
 [user]
 	name = Thomas Layh
-	email = develop@layh.com
+	email = thomas.layh@aoe.com
 [alias]
 	graph = !git log --graph --pretty=oneline --abbrev-commit
 	hist = !git log \\\n --pretty=format:\"%h %ad | %s%d [%an]\" \\\n --graph --date=short
@@ -17,13 +17,14 @@
 	lastlog = log -1 HEAD
 	amend = commit --amend
 	unstage = reset HEAD
-	smalllog = log -n 5 --pretty --oneline
+	smalllog = log -n 5
 	pullr = pull -r
 	standup = !"git log --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --date=local"
 [core]
 	editor = vim
 	pager = cat
 	autocrlf = input
+	excludesfile = /Users/thomas.layh/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -31,7 +32,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [push]
-	default = matching
+	default = current
 [color "branch"]
 	current = yellow reverse
 	local = yellow
