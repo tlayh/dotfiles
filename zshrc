@@ -12,7 +12,7 @@ ZSH_THEME="pygmalion"
 
 #to try later
 #ZSH_THEME="muse"
-ZSH_THEME="steeef"
+#ZSH_THEME="steeef"
 
 
 # Example aliases
