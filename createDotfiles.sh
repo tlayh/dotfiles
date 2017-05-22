@@ -10,6 +10,9 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc vim zshrc oh-my-zsh gitconfig"    # list of files/folders to symlink in homedir
 
+mkdir -p ~/dotfiles/oh-my-zsh/custom/plugins
+cp -R ~/dotfiles/customPlugins/zsh-autosuggestions-plugin ~/dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions
+
 ##########
 
 # create dotfiles_old in homedir
