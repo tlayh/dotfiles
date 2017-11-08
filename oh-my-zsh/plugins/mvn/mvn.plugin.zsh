@@ -19,7 +19,10 @@ BACKGROUND_MAGENTA=`tput setab 5`
 BACKGROUND_CYAN=`tput setab 6`
 BACKGROUND_WHITE=`tput setab 7`
 RESET_FORMATTING=`tput sgr0`
+<<<<<<< 22a30b08650c88c747ff495e979c0d4a7ecb182e
 
+=======
+>>>>>>> plugin updates
 
 # Wrapper function for Maven's mvn command.
 mvn-color() {
