@@ -47,7 +47,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast vagrant ruby gem rvm npm brew symfony2 wd mvn atom composer zsh-autosuggestions)
+plugins=(gitfast vagrant ruby gem rvm npm brew symfony2 wd mvn atom composer zsh-autosuggestions docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,6 +70,7 @@ zstyle ':completion:*' special-dirs ..
 
 # change some directory colors:
 export LS_COLORS="${LS_COLORS}tw=30;00:ow=32;32:"
+export GOROOT=/usr/local/Cellar/go/1.8/
 
 # VCODE
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
