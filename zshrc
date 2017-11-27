@@ -70,7 +70,7 @@ zstyle ':completion:*' special-dirs ..
 
 # change some directory colors:
 export LS_COLORS="${LS_COLORS}tw=30;00:ow=32;32:"
-export GOROOT=/usr/local/Cellar/go/1.8/
+#export GOROOT=/usr/local/Cellar/go/1.9/
 
 # VCODE
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
