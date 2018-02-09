@@ -24,8 +24,6 @@ alias cdp="cd -P"
 alias grep="grep --color"
 alias svndiff="svn diff | colordiff"
 
-eval "$(thefuck --alias)"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
