@@ -52,9 +52,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
-export GOPATH=/Users/thomas.layh/Projects/GO
+export GOPATH=$HOME/Projects/GO
 export GOROOT=/usr/local/Cellar/go/1.9.2/libexec
-export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$GOPATH/bin:$PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
