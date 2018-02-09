@@ -52,9 +52,11 @@ plugins=(gitfast vagrant ruby gem rvm npm brew symfony2 wd mvn atom composer zsh
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
+# export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
-export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
+export GOPATH=/Users/thomas.layh/Projects/GO
+export GOROOT=/usr/local/Cellar/go/1.9.2/libexec
+export PATH=/Users/tlayh/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$GOPATH/bin:$PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
@@ -70,7 +72,8 @@ zstyle ':completion:*' special-dirs ..
 
 # change some directory colors:
 export LS_COLORS="${LS_COLORS}tw=30;00:ow=32;32:"
-#export GOROOT=/usr/local/Cellar/go/1.9/
 
 # VCODE
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
+
+command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"

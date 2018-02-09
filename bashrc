@@ -5,3 +5,5 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}
 export PS1="[\u@\h \W]\\$ "
 
 export VAGRANT_HOME=/vm/.vagrant.d
+
+command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell bash)"
