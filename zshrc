@@ -52,8 +52,13 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
 
-export GOPATH=$HOME/Projects/GO
-export GOROOT=/usr/local/Cellar/go/1.9.2/libexec
+if [ "$(whoami)" != "tlayh" ]; then
+    export GOPATH=$HOME/Projects/GO
+    export GOROOT=/usr/local/Cellar/go/1.9.2/libexec
+else
+    export GOPATH=$HOME/Projects/VelociParser
+    export GOROOT=/usr/local/Cellar/go/1.9.4/libexec
+fi
 export PATH=$HOME/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$GOPATH/bin:$PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
