@@ -49,9 +49,6 @@ plugins=(gitfast brew symfony2 wd mvn atom composer zsh-autosuggestions docker)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-# export ANDROID_HOME=/Users/tlayh/Projects/android/adt-bundle-mac-x86_64/sdk
-
 if [ "$(whoami)" != "tlayh" ]; then
     export GOPATH=$HOME/Projects/GO
     export GOROOT=/usr/local/go
@@ -61,7 +58,7 @@ else
 fi
 export PATH=$HOME/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$GOPATH/bin:$PATH
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export VAGRANT_HOME=/vm/.vagrant.d
 
