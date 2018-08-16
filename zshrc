@@ -5,10 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="pygmalion"
+ZSH_THEME="pygmalion"
 #ZSH_THEME="tjkirch"
 #ZSH_THEME="af-magic"
-ZSH_THEME="fino"
+#ZSH_THEME="fino"
 
 #to try later
 #ZSH_THEME="muse"
@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [ "$(whoami)" != "tlayh" ]; then
     export GOPATH=$HOME/Projects/GO
-    export GOROOT=/usr/local/go
+	export GOROOT=/usr/local/Cellar/go/1.10.3/libexec
 else
     export GOPATH=$HOME/Projects/VelociParser
     export GOROOT=/usr/local/Cellar/go/1.9.4/libexec
