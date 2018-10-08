@@ -45,13 +45,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast brew symfony2 wd mvn atom composer zsh-autosuggestions docker)
+plugins=(gitfast brew symfony2 wd mvn atom composer zsh-autosuggestions docker sublime)
 
 source $ZSH/oh-my-zsh.sh
 
 if [ "$(whoami)" != "tlayh" ]; then
     export GOPATH=$HOME/Projects/GO
-	export GOROOT=/usr/local/Cellar/go/1.10.3/libexec
+	export GOROOT=/usr/local/Cellar/go/1.11/libexec
 else
     export GOPATH=$HOME/Projects/VelociParser
     export GOROOT=/usr/local/Cellar/go/1.9.4/libexec
