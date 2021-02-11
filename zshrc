@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -5,15 +7,11 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pygmalion"
+#ZSH_THEME="pygmalion"
 #ZSH_THEME="tjkirch"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="fino"
-
-#to try later
-#ZSH_THEME="muse"
-#ZSH_THEME="steeef"
-
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,22 +43,17 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast brew symfony2 wd mvn atom composer zsh-autosuggestions docker sublime)
+plugins=(gitfast brew wd mvn atom composer zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source $(brew --prefix php-version)/php-version.sh
 
-if [ "$(whoami)" != "tlayh" ]; then
-    export GOPATH=$HOME/Projects/GO
-	export GOROOT=/usr/local/Cellar/go/1.11/libexec
-else
-    export GOPATH=$HOME/Projects/VelociParser
-    export GOROOT=/usr/local/Cellar/go/1.9.4/libexec
-fi
-export PATH=$HOME/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$GOPATH/bin:$PATH
+export GOPATH=$HOME/Projects/GO:$HOME/Projects/aoe:$HOME/virtualgo/flamingo
+export GOROOT=/usr/local/Cellar/go/1.15.6/libexec
+
+export PATH=$HOME/dotfiles/iterm:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/thomas.layh/Projects/GO/bin:$PATH
 
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-export VAGRANT_HOME=/vm/.vagrant.d
 
 setTerminalText () {
     # echo works in bash & zsh
@@ -77,3 +70,15 @@ export LS_COLORS="${LS_COLORS}tw=30;00:ow=32;32:"
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
 
 command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
+
+source ~/dotfiles/.iterm2_shell_integration.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# nvm stuff
+#export NVM_DIR="$HOME/.nvm"
+#  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+zprof
